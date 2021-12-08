@@ -20,7 +20,7 @@ document.getElementById('blind-submit').onclick = function (e) {
     xmlHttp.onreadystatechange = function (res) {
       if (xmlHttp.readyState === 4) {
         if (res.currentTarget.status ==200) {
-            alert("Thanks for regestering")
+            alert("Thanks for registering.")
             window.location.href = "https://istetkmce.in";
         }
         console.log(res.currentTarget.status);
