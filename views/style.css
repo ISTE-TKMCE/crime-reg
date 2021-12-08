@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    position:relative;
+
+}
+
+.container-fluid{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.dvl{
+    height:100vh;
+    background-color:var(--primary);
+
+}
+
+.dvr{
+    height:100vh;
+    display:grid;
+    grid-template-rows: auto auto auto;
+}
+.content-iste q{
+    color:var(--primary);
+    font-size:20px;
+}
+.content-iste{
+    text-align:left;
+    padding:20px;
+    margin:0 auto;
+}
+
+
+.container{
+    padding:0;
+    min-height:100vh;
+    width:100%;
+display:flex;
+justify-content: center;
+align-items:center;
+
+}
+
+
+.inner-container-wrapper{
+
+    height:100%;
+    width:90%;
+   
+
+}
+
+
+
+
+
+
+
+.inner-container-2{
+    width:100%;
+    display:grid;
+    grid-auto-flow:row;
+    grid-template-rows:auto auto auto;
+    grid-gap:20px;
+}
+/* #after-payment{
+    display:none;
+}
+
+#verify-fee{
+
+    position:absolute;
+    right:0;
+} */
+
+.card::before{
+    content:'';
+    position:absolute;
+    left:0;
+    height:100%;
+    width:4px;
+    background-color:var(--primary);
+}
+.card::after{
+    content:'';
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%); 
+    left:-6px;
+    height:15px;
+    width:15px;
+    border-radius:50%;
+    background-color:var(--primary);
+}
+form{
+    height:100%;
+    width:100%;
+}
+
+
+
+#iste-logo{
+    width:100px;
+}
+
+
+.inner-container-3{
+    width:100%;
+    display:grid;
+    grid-auto-flow:row;
+    grid-template-rows:auto auto auto auto;
+    grid-gap:20px;
+}
+
+.inner-container-3 .card, .inner-container-2 .card{
+    text-align:center;
+    width:80%;
+    margin:0 auto;
+
+}
+
+.inner-container-3 .card::before{
+    background-color:var(--success);
+}
+.inner-container-3 .card::after{
+    background-color:var(--success);
+}
+
+.checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #4bb71b;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb71b;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    position:relative;
+    top: 5px;
+    right: 5px;
+   margin: 0 auto;
+}
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4bb71b;
+    fill: #fff;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+ 
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #4bb71b;
+    }
+}
+
+/* .container:nth-child(2){
+    display:none;
+} */
+/* .container:nth-child(3){
+    display:none;
+} */
+/* .container:nth-child(4){
+    display:none;
+} */
+h3{
+    color:var(--primary);
+}
+
+label{
+    font-weight:bold;
+}
+input, select{
+    border:1px solid black !important;
+}
+
+.card-body{
+    text-align:center;
+    display:grid;
+
+}
+@media  screen and (max-width:400px) {
+    
+
+    #iste-logo{
+        height:50px;
+        width:50px;
+    }
+
+    .inner-container-wrapper{
+        min-height:100vh;
+    }
+    .inner-container-3 .card, .inner-container-2 .card{
+        text-align:center;
+        width:90%;
+        margin:0 auto;
+       
+    }
+}
