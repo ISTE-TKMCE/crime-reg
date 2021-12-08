@@ -21,6 +21,7 @@ document.getElementById('blind-submit').onclick = function (e) {
       if (xmlHttp.readyState === 4) {
         if (res.currentTarget.status ==200) {
             alert("Thanks for registering.")
+            window.location.reload(); 
             window.location.href = "https://istetkmce.in";
         }
         console.log(res.currentTarget.status);
