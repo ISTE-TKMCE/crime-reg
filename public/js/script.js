@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 document.getElementById('blind-submit').onclick = function (e) {
     e.preventDefault();
 
